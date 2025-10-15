@@ -1,0 +1,104 @@
+name: New Activity Request
+description: Request to add a new extracurricular activity to the system
+title: "[Activity]: "
+labels: ["enhancement", "activity"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request adding a new extracurricular activity to the Mergington High School system.
+  
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: What is the name of the activity?
+      placeholder: "Example: Robotics Club"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity Description
+      description: Provide a detailed description of the activity
+      placeholder: "Example: Build and program robots to compete in regional competitions. Learn engineering, programming, and teamwork skills."
+    validations:
+      required: true
+  
+  - type: input
+    id: activity-type
+    attributes:
+      label: Activity Type/Category
+      description: What type of activity is this?
+      placeholder: "Example: STEM Club, Sports, Arts, Music, etc."
+    validations:
+      required: true
+  
+  - type: input
+    id: schedule
+    attributes:
+      label: Schedule
+      description: When does this activity meet?
+      placeholder: "Example: Every Tuesday and Thursday, 3:30 PM - 5:00 PM"
+    validations:
+      required: true
+  
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where does this activity take place?
+      placeholder: "Example: Room 204, Engineering Lab"
+    validations:
+      required: true
+  
+  - type: input
+    id: advisor-contact
+    attributes:
+      label: Faculty Advisor / Contact
+      description: Who is the teacher or advisor for this activity?
+      placeholder: "Example: Ms. Johnson"
+    validations:
+      required: true
+  
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Participants
+      description: What's the maximum number of students who can join?
+      placeholder: "Example: 20 students"
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: difficulty-level
+    attributes:
+      label: Difficulty Level
+      description: What skill level is this activity appropriate for?
+      options:
+        - All levels
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: false
+  
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites or Requirements
+      description: Are there any prerequisites or special requirements to join?
+      placeholder: "Example: Interest in technology and problem-solving. No prior programming experience required."
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other information about this activity?
+      placeholder: "Example: Students may need to pay a $20 materials fee. Travel to competitions included."
+    validations:
+      required: false

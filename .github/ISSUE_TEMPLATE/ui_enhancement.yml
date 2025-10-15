@@ -1,0 +1,114 @@
+name: UI/Design Enhancement
+description: Request visual, styling, or design changes to the website
+title: "[UI]: "
+labels: ["enhancement", "ui"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the look and feel of our website! Please describe the design changes you'd like to see.
+  
+  - type: textarea
+    id: design-description
+    attributes:
+      label: Design Change Description
+      description: What visual or design changes would you like?
+      placeholder: "Example: Add dark mode toggle so students can switch between light and dark themes"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current Design/Appearance
+      description: What does the current design look like that you want to change?
+      placeholder: "Example: The website currently only has a light theme with blue and white colors"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Desired Design/Appearance
+      description: What should the new design look like?
+      placeholder: |
+        - Add a toggle button in the top right corner
+        - Dark mode should use dark gray background (#1a1a1a) with white text
+        - Maintain school colors (lime green accents) in dark mode
+        - Save user preference in browser storage
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: design-type
+    attributes:
+      label: Type of Design Change
+      description: What kind of design change is this?
+      options:
+        - Color scheme/Theming
+        - Layout/Spacing
+        - Typography/Fonts
+        - Icons/Images
+        - Animations/Transitions
+        - Responsive design/Mobile
+        - Accessibility
+        - Branding
+    validations:
+      required: true
+  
+  - type: textarea
+    id: school-branding
+    attributes:
+      label: School Branding Requirements
+      description: Are there specific school colors, logos, or mascots that should be used?
+      placeholder: |
+        Example:
+        - School colors: White and lime green (#32CD32)
+        - Mascot: Use Octocat variants from https://octodex.github.com/
+        - Logo should be visible on all pages
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: affected-pages
+    attributes:
+      label: Affected Pages
+      description: Which pages should have this design change?
+      options:
+        - All pages (site-wide)
+        - Homepage only
+        - Activities list page
+        - Activity detail pages
+        - Navigation/Header
+        - Footer
+        - Specific component or section
+    validations:
+      required: true
+  
+  - type: textarea
+    id: design-inspiration
+    attributes:
+      label: Design Examples or Inspiration
+      description: Do you have examples, mockups, or links to similar designs?
+      placeholder: "Example: Here's a screenshot of what I'm envisioning, or check out this similar design at https://example.com"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints or Suggestions
+      description: Any technical details or implementation suggestions?
+      placeholder: "Example: This could be implemented using CSS variables and a JavaScript toggle that adds/removes a 'dark-mode' class"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: accessibility-notes
+    attributes:
+      label: Accessibility Considerations
+      description: Are there any accessibility requirements or considerations?
+      placeholder: "Example: Ensure sufficient color contrast for readability; toggle should be keyboard accessible"
+    validations:
+      required: false
