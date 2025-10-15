@@ -1,0 +1,118 @@
+name: Documentation Update
+description: Request updates, corrections, or additions to documentation
+title: "[Docs]: "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! Clear docs make it easier for everyone to use and maintain the system.
+  
+  - type: textarea
+    id: documentation-issue
+    attributes:
+      label: Documentation Issue
+      description: What's wrong or missing in the current documentation?
+      placeholder: "Example: The README.md doesn't explain how to set up the database for local development"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Type of Documentation
+      description: What kind of documentation needs to be updated?
+      options:
+        - README
+        - Setup/Installation Guide
+        - User Guide
+        - Developer Guide
+        - API Documentation
+        - Code Comments
+        - Configuration Guide
+        - Troubleshooting Guide
+    validations:
+      required: true
+  
+  - type: textarea
+    id: affected-files
+    attributes:
+      label: Affected Files or Sections
+      description: Which documentation files or sections need to be updated?
+      placeholder: |
+        Example:
+        - README.md - Installation section
+        - docs/how-to-develop.md - Database setup
+    validations:
+      required: true
+  
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content (if applicable)
+      description: What does the current documentation say (if it exists)?
+      placeholder: "Example: Current README just says 'Install dependencies' without explaining which database to use"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: desired-content
+    attributes:
+      label: Desired Content or Updates
+      description: What should the documentation include or say instead?
+      placeholder: |
+        Example:
+        - List the required MongoDB version
+        - Explain how to install MongoDB locally
+        - Provide connection string examples
+        - Include troubleshooting for common connection errors
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: doc-priority
+    attributes:
+      label: Priority
+      description: How important is this documentation update?
+      options:
+        - High - Blocking or causing confusion
+        - Medium - Would help but not critical
+        - Low - Minor improvement or clarification
+    validations:
+      required: true
+  
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Details to Include
+      description: Are there specific technical details, code examples, or commands that should be documented?
+      placeholder: |
+        Example:
+        ```bash
+        # Install MongoDB
+        brew install mongodb-community
+        
+        # Start MongoDB
+        brew services start mongodb-community
+        ```
+    validations:
+      required: false
+  
+  - type: textarea
+    id: audience
+    attributes:
+      label: Target Audience
+      description: Who is this documentation for?
+      placeholder: "Example: Teachers who want to set up the system for their own school"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues or Context
+      description: Is this related to any features, bugs, or other issues?
+      placeholder: "Example: This came up when we tried to help another school set up their own instance"
+    validations:
+      required: false

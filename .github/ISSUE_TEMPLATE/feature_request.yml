@@ -1,0 +1,106 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for the Activities website
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide detailed information so we can understand and implement your idea.
+  
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Describe the feature you'd like to see
+      placeholder: "Example: Add a calendar view to display all activities by date"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: problem-or-need
+    attributes:
+      label: Problem or Need
+      description: What problem does this feature solve? Why is it needed?
+      placeholder: "Example: Students and parents find it difficult to plan their schedules because they can't see activities organized by date"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What should the feature do? How will we know when it's complete?
+      placeholder: |
+        - Display activities in a monthly calendar format
+        - Show activity name and time on each calendar date
+        - Allow clicking on an activity to see full details
+        - Highlight dates with multiple activities
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Feature Area
+      description: Which area of the website should this feature be added to?
+      options:
+        - Activities List/Display
+        - Activity Details
+        - Student Sign-up Process
+        - Filters and Search
+        - User Interface/Design
+        - Navigation
+        - New Page or Section
+        - Backend/Data Management
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature?
+      options:
+        - High - Critical for users
+        - Medium - Would significantly improve experience
+        - Low - Nice to have enhancement
+    validations:
+      required: true
+  
+  - type: textarea
+    id: suggested-solution
+    attributes:
+      label: Suggested Solution or Implementation Ideas
+      description: Do you have ideas about how this could be implemented?
+      placeholder: "Example: We could use a JavaScript calendar library and modify the activities endpoint to return data grouped by date"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative approaches?
+      placeholder: "Example: Instead of a calendar, we could add date range filters to the activities list"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations or Constraints
+      description: Are there any limitations, technical constraints, or dependencies we should know about?
+      placeholder: "Example: This might be slow if we have hundreds of activities; we may need to add pagination"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, mockups, screenshots, or examples that would help
+      placeholder: "Example: Here's a link to a similar calendar feature I saw on another school's website..."
+    validations:
+      required: false
